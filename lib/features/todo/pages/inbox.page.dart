@@ -47,11 +47,11 @@ class InboxPage extends StatelessWidget {
         ),
         body: ValueListenableBuilder<TodoState>(
           valueListenable: context.read<TodoStore>(),
-          builder: (BuildContext context, _, __) {
+          builder: (BuildContext context, TodoState todo, __) {
             return ListView.builder(
               itemCount: todoStore.value.items.length,
               itemBuilder: (BuildContext context, int index) {
-                return TodoItemWidget(todo: todoStore.value.items[index]);
+                return TodoItemWidget(todo: todo.items[index]);
               },
             );
           },
