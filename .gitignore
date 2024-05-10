@@ -3,6 +3,8 @@
 *.iml
 *.lock
 .dart_tool
+.flutter-plugins*
+.metadata
 
 android
 macos

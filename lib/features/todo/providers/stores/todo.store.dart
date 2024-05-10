@@ -24,4 +24,11 @@ class TodoStore extends ValueNotifier<TodoState> {
       value = TodoError(message: e.toString());
     }
   }
+
+  void addTodo(TodoModel todo) {
+    value = TodoLoaded(
+      items: [...value.items, todo],
+      subtasks: value.subtasks,
+    );
+  }
 }

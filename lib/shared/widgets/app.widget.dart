@@ -18,11 +18,17 @@ class AppWidget extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) {
-          WidgetsBinding.instance.addPersistentFrameCallback((_) async {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
             await Future.wait([
               context.read<TodoStore>().getTodos(),
             ]);
           });
+
+          // WidgetsBinding.instance.addPersistentFrameCallback((_) async {
+          //   Future.wait([
+          //     context.read<TodoStore>().getTodos(),
+          //   ]);
+          // });
 
           return const InboxPage();
         },

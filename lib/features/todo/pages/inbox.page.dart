@@ -4,6 +4,7 @@ import 'package:todo/features/todo/models/todo.model.dart';
 import 'package:todo/features/todo/providers/states/todo.error.state.dart';
 import 'package:todo/features/todo/providers/states/todo.loaded.state.dart';
 import 'package:todo/features/todo/providers/states/todo.loading.state.dart';
+import 'package:todo/features/todo/providers/states/todo.state.dart';
 import 'package:todo/features/todo/providers/stores/todo.store.dart';
 import 'package:todo/features/todo/widgets/todo.item.widget.dart';
 
@@ -44,10 +45,15 @@ class InboxPage extends StatelessWidget {
           },
           child: const Icon(Icons.add),
         ),
-        body: ListView.builder(
-          itemCount: todoStore.value.items.length,
-          itemBuilder: (BuildContext context, int index) {
-            return TodoItemWidget(todo: todoStore.value.items[index]);
+        body: ValueListenableBuilder<TodoState>(
+          valueListenable: context.read<TodoStore>(),
+          builder: (BuildContext context, _, __) {
+            return ListView.builder(
+              itemCount: todoStore.value.items.length,
+              itemBuilder: (BuildContext context, int index) {
+                return TodoItemWidget(todo: todoStore.value.items[index]);
+              },
+            );
           },
         ),
       );
