@@ -1,0 +1,13 @@
+.vscode
+.idea
+*.iml
+*.lock
+.dart_tool
+
+android
+macos
+ios
+windows
+web
+
+build

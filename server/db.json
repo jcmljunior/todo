@@ -1,0 +1,84 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "username": "johndoe",
+            "password": "password1"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "username": "janesmith",
+            "password": "password2"
+        },
+        {
+            "id": 3,
+            "name": "Michael Johnson",
+            "username": "michaeljohnson",
+            "password": "password3"
+        },
+        {
+            "id": 4,
+            "name": "Emily Davis",
+            "username": "emilydavis",
+            "password": "password4"
+        },
+        {
+            "id": 5,
+            "name": "David Wilson",
+            "username": "davidwilson",
+            "password": "password5"
+        },
+        {
+            "id": 6,
+            "name": "Sarah Thompson",
+            "username": "sarahthompson",
+            "password": "password6"
+        },
+        {
+            "id": 7,
+            "name": "Daniel Anderson",
+            "username": "danielanderson",
+            "password": "password7"
+        },
+        {
+            "id": 8,
+            "name": "Olivia Taylor",
+            "username": "oliviataylor",
+            "password": "password8"
+        },
+        {
+            "id": 9,
+            "name": "Joseph Martinez",
+            "username": "josephmartinez",
+            "password": "password9"
+        },
+        {
+            "id": 10,
+            "name": "Mia Brown",
+            "username": "mIABrown",
+            "password": "password10"
+        }
+    ],
+    "todos": [
+        {
+            "id": 1,
+            "userId": 1,
+            "title": "Todo 1",
+            "content": "Todo 1 content",
+            "isCompleted": false,
+            "isFavorite": false,
+            "createdAt": "2021-09-30T19:00:00.000Z"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "title": "Todo 2",
+            "content": "Todo 2 content",
+            "isCompleted": false,
+            "isFavorite": false,
+            "createdAt": "2021-09-30T19:00:00.000Z"
+        }
+    ]
+}
