@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:todo/features/todo/models/todo.model.dart';
+import 'package:flutter/widgets.dart'
+    show Text, TextStyle, BuildContext, Widget, StatelessWidget;
+import 'package:todo/shared/todo/models/todo.model.dart';
 
 class TodoDateWidget extends StatelessWidget {
   final TodoModel todo;

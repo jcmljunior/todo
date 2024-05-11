@@ -1,14 +1,16 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:todo/features/todo/models/todo.model.dart';
-import 'package:todo/shared/services/common.service.dart';
+import 'package:todo/shared/app/constants/app.constants.dart';
+import 'package:todo/shared/todo/models/todo.model.dart';
 
-class TodoService extends CommonService {
-  TodoService(super.client);
+class TodoService {
+  final Dio _client;
+
+  TodoService(this._client);
 
   Future<List<TodoModel>> getTodos() async {
     final Response<dynamic> response =
-        await client.get("${uri.toString()}todos",
+        await _client.get("$baseUrl$pathForTodos",
             options: Options(
               contentType: ContentType.json.toString(),
               headers: {

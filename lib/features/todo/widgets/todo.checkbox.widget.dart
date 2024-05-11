@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:todo/features/todo/models/todo.model.dart';
+import 'dart:developer';
+import 'package:flutter/material.dart'
+    show Checkbox, BuildContext, Widget, StatelessWidget;
+import 'package:todo/shared/todo/models/todo.model.dart';
 
 class TodoCheckboxWidget extends StatelessWidget {
   final TodoModel todo;
@@ -14,7 +16,7 @@ class TodoCheckboxWidget extends StatelessWidget {
     return Checkbox(
       value: false,
       onChanged: (bool? value) {
-        return debugPrint(todo.id.toString());
+        inspect(todo);
       },
     );
   }

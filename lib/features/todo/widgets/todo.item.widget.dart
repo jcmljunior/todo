@@ -1,8 +1,17 @@
-import 'package:flutter/material.dart';
-import 'package:todo/features/todo/models/todo.model.dart';
+import 'package:flutter/widgets.dart'
+    show
+        Row,
+        Column,
+        Padding,
+        CrossAxisAlignment,
+        EdgeInsets,
+        BuildContext,
+        Widget,
+        StatelessWidget;
 import 'package:todo/features/todo/widgets/todo.checkbox.widget.dart';
 import 'package:todo/features/todo/widgets/todo.date.widget.dart';
 import 'package:todo/features/todo/widgets/todo.title.widget.dart';
+import 'package:todo/shared/todo/models/todo.model.dart';
 
 class TodoItemWidget extends StatelessWidget {
   final TodoModel todo;

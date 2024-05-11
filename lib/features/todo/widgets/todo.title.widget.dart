@@ -1,5 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:todo/features/todo/models/todo.model.dart';
+import 'package:flutter/widgets.dart'
+    show
+        StatelessWidget,
+        BuildContext,
+        Widget,
+        CrossAxisAlignment,
+        Text,
+        TextStyle,
+        FontWeight,
+        Expanded,
+        Column;
+import 'package:todo/shared/todo/models/todo.model.dart';
 
 class TodoTitleWidget extends StatelessWidget {
   final TodoModel todo;

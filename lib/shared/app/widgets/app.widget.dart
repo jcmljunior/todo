@@ -1,4 +1,13 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show
+        BuildContext,
+        Widget,
+        MaterialApp,
+        ThemeData,
+        Colors,
+        Brightness,
+        WidgetsBinding,
+        StatelessWidget;
 import 'package:provider/provider.dart';
 import 'package:todo/features/todo/pages/inbox.page.dart';
 import 'package:todo/features/todo/providers/stores/todo.store.dart';
@@ -23,12 +32,6 @@ class AppWidget extends StatelessWidget {
               context.read<TodoStore>().getTodos(),
             ]);
           });
-
-          // WidgetsBinding.instance.addPersistentFrameCallback((_) async {
-          //   Future.wait([
-          //     context.read<TodoStore>().getTodos(),
-          //   ]);
-          // });
 
           return const InboxPage();
         },
